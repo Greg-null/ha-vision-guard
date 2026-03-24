@@ -1,0 +1,31 @@
+name: Vision Guard
+version: "1.0.0"
+slug: vision_guard
+description: >-
+  Lokale Objekterkennung (YOLOv8) mit Bounding Boxes und GIF-Erstellung
+  aus Kamera-Streams. Optimiert für CPU-Inferenz auf Intel N95.
+url: https://github.com/Greg-null/ha-vision-guard
+arch:
+  - amd64
+startup: services
+boot: auto
+init: false
+map:
+  - config:rw
+  - media:rw
+ports:
+  5000/tcp: 5000
+ports_description:
+  5000/tcp: Vision Guard REST API
+options:
+  confidence_threshold: 0.45
+  model_size: "yolov8n"
+  gif_fps: 8
+  gif_width: 640
+  log_level: "info"
+schema:
+  confidence_threshold: float(0.1,1.0)
+  model_size: list(yolov8n|yolov8s|yolov8m)
+  gif_fps: int(2,30)
+  gif_width: int(320,1920)
+  log_level: list(debug|info|warning|error)
