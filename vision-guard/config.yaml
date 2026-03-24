@@ -7,7 +7,7 @@ description: >-
 url: https://github.com/Greg-null/ha-vision-guard
 arch:
   - amd64
-startup: services
+startup: application
 boot: auto
 init: false
 map:
