@@ -1,5 +1,5 @@
 name: Vision Guard
-version: "1.0.0"
+version: "1.0.1"
 slug: vision_guard
 description: >-
   Lokale Objekterkennung (YOLOv8) mit Bounding Boxes und GIF-Erstellung

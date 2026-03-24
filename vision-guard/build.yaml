@@ -1,2 +1,2 @@
 build_from:
-  amd64: "python:3.12-slim"
+  amd64: "docker.io/library/python:3.12-slim"
